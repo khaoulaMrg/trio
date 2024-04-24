@@ -1,9 +1,12 @@
-.exemple-spacer{
-    flex : 1 1 auto;
+.container {
+   
+    /* Centre l'image horizontalement et verticalement */
+    height: 100vh; /* Définit la hauteur de la div pour couvrir la hauteur de la fenêtre */
+    display: flex; /* Utilise Flexbox pour centrer le contenu verticalement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+   
 }
-/* Style global pour le toolbar */
-/* Style pour le mat-toolbar */
-/* Style pour le mat-toolbar */
 mat-toolbar {
     background-color: #f5ebeb; /* Bleu primaire pour le toolbar */
     color: rgb(10, 3, 3); /* Couleur du texte en blanc */
@@ -24,12 +27,18 @@ mat-toolbar {
   
   .nav-links {
     display: flex;
+    
   }
   
   .nav-links a {
-    margin-right: 10px; /* Ajouter un peu d'espace entre les liens */
+   
+    margin-right: 10px;
+    padding-left: 10rem; /* Ajouter un peu d'espace entre les liens */
   }
-  
+  .nav-links button{
+    color: rgb(243, 250, 250);
+    background-color: blue;
+  }
   .example-spacer {
     flex: 1; /* Cet élément pousse les liens vers la gauche */
   }

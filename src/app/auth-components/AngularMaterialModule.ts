@@ -14,8 +14,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
-import { MatGridListModule } from '@angular/material/grid-list';
-
 // Add other imports as needed
 
 @NgModule({
@@ -33,8 +31,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatSelectModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    HttpClientModule,
-    MatGridListModule
+    HttpClientModule
     // Add other imports as needed
   ],
   exports: [

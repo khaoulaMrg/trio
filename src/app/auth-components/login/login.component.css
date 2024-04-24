@@ -7,20 +7,30 @@
     display: flex; /* Utilise Flexbox pour centrer le contenu verticalement */
     justify-content: center; /* Centre le contenu horizontalement */
     align-items: center; /* Centre le contenu verticalement */
+   
 }
 .background-image {
-    background-image: url('/assets/img/demandeB.gif');
-    filter: blur(2px); /* Ajustez la valeur du flou selon vos préférences */
-    /* Autres styles pour la taille, la position, etc. de l'image */
+    position: absolute; /* Position absolue pour placer l'image derrière le formulaire */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Pour placer l'image derrière les autres éléments */
+    background-image: url("/assets/img/job.jpg"); /* Chemin de votre image */
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la zone */
+    filter: blur(3px); /* Applique un flou à l'image */
 }
+
 /* Conteneur du formulaire de connexion */
 .login-form {
     width: 100%; /* Ajustez la largeur selon vos besoins */
     max-width: 400px; /* Limite la largeur maximale du formulaire */
     padding: 20px;
-    background-color: white; /* Couleur de fond blanche */
+    border-color: black;
+    /* Couleur de fond blanche */
     border-radius: 8px; /* Bordures arrondies */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre pour le formulaire */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     /* Ombre pour le formulaire */
 }
 
 /* Titre du formulaire */
@@ -47,4 +57,6 @@
     margin-top: 20px; /* Ajoute de la marge supérieure pour séparer le texte d'inscription */
 }
 
-  
+  h1{
+color: #378bdf;
+  }

@@ -1,1 +1,37 @@
-<p>dashboard works!</p>
+<div class="container">
+    <mat-grid-list cols="24">
+        <mat-grid-tile colspan="24">
+            <h2 style="margin-left: 200px;">Add Category</h2>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="24">
+            <form [formGroup]="categoryForm">
+                <mat-grid-list cols="1">
+                    <mat-grid-tile>
+                        <div class="profile-badge">
+                            <label for="upload profile image" class="upload-label" *ngIf="selectedFile">
+                                <img class="profile" [src]="imagePreview" alt="profile"/>
+                            </label>
+                            <input type="file" mat-raised-button color="primary" id="upload profile image"
+                                accept="image/x-png,image/gif,image/jpeg" (change)="onFileSelected($event)">
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Name</mat-label>
+                            <input matInput placeholder="Name" formControlName="name" required>
+                            <mat-error>This Input Is Required!</mat-error>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Description</mat-label>
+                            <textarea matInput placeholder="Description" formControlName="description" required></textarea>
+                            <mat-error>This Input Is Required!</mat-error>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                <button mat-raised-button color="primary" (click)="postCategory()">Add</button>
+            </form>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

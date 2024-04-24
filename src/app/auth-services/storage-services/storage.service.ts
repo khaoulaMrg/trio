@@ -57,6 +57,10 @@ const user = this.getUser();
   }
  
  
+  static signout(){
+    window.localStorage.removeItem(USER);
+    window.localStorage.removeItem(TOKEN);
+  }
 
 
 }

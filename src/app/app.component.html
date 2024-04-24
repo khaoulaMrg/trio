@@ -1,28 +1,28 @@
 
 <div *ngIf="!isAdminLoggedIn && !isCustomerLoggedIn ">
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    </button>
+    <span>Pfe</span>
+    <span class="example-spacer"></span>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/home" routerLinkActive="active">Home</a>
 
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-  </button>
-  <span>Pfe</span>
-  <span class="example-spacer"></span>
-  <div class="nav-links">
-    <a nz-button nzType="link" routerLink="/emploi" routerLinkActive="active" >Emploi</a>
-    <a nz-button nzType="link" routerLink="/stage" routerLinkActive="active" >Stage</a>
+      <a nz-button nzType="link" routerLink="/scraping" routerLinkActive="Active" (click)="toggleScrapingNavbar()" >Annonces/Publier vos offres</a>
+      <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">
+        <mat-icon>person</mat-icon>
+      </a>
+    </div>
+  </mat-toolbar>
+</div>
 
-    <a nz-button nzType="link" routerLink="/demande" routerLinkActive="active" >Publier vos offres </a>
 
-    <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">
-      <mat-icon>person</mat-icon>
-  </a>
+
+
+
   
 
 
-  </div>
- 
- 
-</mat-toolbar>
-</div>
 
 <div *ngIf="isAdminLoggedIn">
 
@@ -36,7 +36,7 @@
   <div class="nav-links">
     <a nz-button nzType="link" routerLink="/admin/dashboard" routerLinkActive="active" >Dashboard</a>
 
-    <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Logout</a>
+    <a nz-button nzType="link" routerLink="/login" routerLinkActive="active" (click)="logout()">Logout</a>
   </div>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
@@ -60,10 +60,8 @@
   <div class="nav-links">
     <a nz-button nzType="link" routerLink="/emploi" routerLinkActive="active" >Emploi</a>
     <a nz-button nzType="link" routerLink="/stage" routerLinkActive="active" >Stage</a>
-
-    <a nz-button nzType="link" routerLink="/demande" routerLinkActive="active" >Demandes</a>
-    <a nz-button nzType="link" routerLink="/customer/dashboard" routerLinkActive="active" >Dashboard</a>
-    <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Logout</a>
+    <a nz-button nzType="link" routerLink="/customer/dashboard" routerLinkActive="active" >Publier vos offres </a>
+    <a nz-button nzType="link" routerLink="/login" routerLinkActive="active" (click)="logout()">Logout</a>
   </div>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
@@ -71,9 +69,10 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>share</mat-icon>
   </button>
-</mat-toolbar>
+  </mat-toolbar>
 </div>
 
 
 
 <router-outlet></router-outlet>
+
